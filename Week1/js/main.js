@@ -1,7 +1,7 @@
-// Project: VFW Project 3
+// Project: MIU Week 1
 // Name: Brent Marohnic
-// Term: 1207
-// Date: 2012-07-19
+// Term: 1208
+// Date: 2012-08-02
 
 window.addEventListener("DOMContentLoaded", function(){
 	
