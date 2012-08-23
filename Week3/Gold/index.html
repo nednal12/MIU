@@ -32,18 +32,20 @@
 	<body>
 	
 	<!--  ------------------------------------------- Intial Page ------------------------------------------------------- -->
-	<div data-role="page" id="page1">
+	<div data-role="page" id="home">
 		
 		<div data-role="header" class="header">
 			<div id="searchDiv">
-				<input type="search" id="searchText" placeholder="search" data-role="none"/>
+				<input type="search" id="searchText" placeholder="search stored data" data-role="none"/>
 				<a href="#search"><input type="submit" id="searchBtn" value="Go" data-role="none"/></a> 
 			</div>
 			<p>Maintenance Tracker</p>
 		</div>
 		
 		<div data-role="content">
+			<h6>Keep Track of Your Vehicle's Maintenance History</h6>
 			<fieldset class="ui-grid-b" id="feature">
+				
 				<div class="ui-block-a">
 					<img src="images/feature.jpg" alt="Woman checking car's oil." id="featureJPG" height="120px" width="80px"/>
 				</div>
@@ -51,7 +53,7 @@
 					<p>Add Vehicle</p>
 				</div>
 				<div class="ui-block-c" id="featureBtn">
-					<a href="addItem.html" data-role="button" data-mini="true" data-inline="true" data-icon="arrow-r" data-iconpos="notext" data-transition="slide"></a>
+					<a href="addItem.html" data-ajax="false" data-role="button" data-mini="true" data-inline="true" data-icon="arrow-r" data-iconpos="notext" data-transition="slide"></a>
 				</div>
 			</fieldset>
 
@@ -92,8 +94,6 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="index.html" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
-					<li><a href="../Bronze/index.html" data-icon="star" >Bronze App</a></li>
-					<li><a href="https://github.com/nednal12/WorkingBranch.git" data-icon="gear" >Git Hub</a></li>
 					<li><a href="#thanks" data-icon="plus">Thanks</a></li>
 				</ul>
 			</div>
@@ -103,28 +103,22 @@
 	<!--  ------------------------------------------- Owners Page ------------------------------------------------------- -->
 	<div data-role="page" id="owners" data-add-back-btn="true">
 		
-		<div data-role="header" class="header">
+		<div data-role="header" class="header" >
 			<p>Owners</p>
 		</div>
 			
 		<div data-role="content">
-			
-			<div data-role="collapsible-set" id="ownersSet">
 				
-				<div data-role="collapsible" id="ownersList" data-collapsed="false">
-					<h3>Owners</h3>
-				</div>
+			<ul data-role="listview" id="ownersList" data-collapsed="false" data-filter="true">
+				<h3>Owners</h3>
+			</ul>
 				
-			</div>
-
 		</div>
 		
 		<div data-role="footer" data-position="fixed" data-id="fixedFooter">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="index.html" data-icon="home">Home</a></li>
-					<li><a href="../Bronze/index.html" data-icon="star" >Bronze App</a></li>
-					<li><a href="https://github.com/nednal12/WorkingBranch.git" data-icon="gear" >Git Hub</a></li>
 					<li><a href="#thanks" data-icon="plus">Thanks</a></li>
 				</ul>
 			</div>
@@ -139,13 +133,9 @@
 		</div>
 			
 		<div data-role="content">
-			<div data-role="collapsible-set" id="makesSet">
-				
-				<div data-role="collapsible" id="makesList" data-collapsed="false">
-					<h3>Vehicle Makes</h3>
-				</div>
-				
-			</div>
+			<ul data-role="listview" id="makesList" data-collapsed="false" data-filter="true">
+				<h3>Vehicle Makes</h3>
+			</ul>
 
 		</div>
 		
@@ -153,8 +143,6 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="index.html" data-icon="home">Home</a></li>
-					<li><a href="../Bronze/index.html" data-icon="star" >Bronze App</a></li>
-					<li><a href="https://github.com/nednal12/WorkingBranch.git" data-icon="gear" >Git Hub</a></li>
 					<li><a href="#thanks" data-icon="plus">Thanks</a></li>
 				</ul>
 			</div>
@@ -169,13 +157,9 @@
 		</div>
 			
 		<div data-role="content">
-			<div data-role="collapsible-set" id="modelsSet">
-				
-				<div data-role="collapsible" id="modelsList" data-collapsed="false">
-					<h3>Vehicle Models</h3>
-				</div>
-				
-			</div>
+			<ul data-role="listview" id="modelsList" data-collapsed="false" data-filter="true">
+				<h3>Vehicle Models</h3>
+			</ul>
 
 		</div>
 		
@@ -183,8 +167,6 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="index.html" data-icon="home">Home</a></li>
-					<li><a href="../Bronze/index.html" data-icon="star" >Bronze App</a></li>
-					<li><a href="https://github.com/nednal12/WorkingBranch.git" data-icon="gear" >Git Hub</a></li>
 					<li><a href="#thanks" data-icon="plus">Thanks</a></li>
 				</ul>
 			</div>
@@ -208,8 +190,6 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="index.html" data-icon="home">Home</a></li>
-					<li><a href="../Bronze/index.html" data-icon="star" >Bronze App</a></li>
-					<li><a href="https://github.com/nednal12/WorkingBranch.git" data-icon="gear" >Git Hub</a></li>
 					<li><a href="#thanks" data-icon="plus">Thanks</a></li>
 				</ul>
 			</div>
@@ -233,8 +213,6 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="index.html" data-icon="home">Home</a></li>
-					<li><a href="../Bronze/index.html" data-icon="star" >Bronze App</a></li>
-					<li><a href="https://github.com/nednal12/WorkingBranch.git" data-icon="gear" >Git Hub</a></li>
 					<li><a href="#thanks" data-icon="plus">Thanks</a></li>
 				</ul>
 			</div>
@@ -249,12 +227,12 @@
 			
 		<div data-role="content">
 			<h1>Special Thanks to the Following:</h1>
-			<h2>Ms. Alarcon</h2>
-			<p>Thank you for providing me with additional time to submit my Week1 Discussion Video and for 
-				providing very challenging assignments.</p>
 			
 			<h2>iStockphoto.com</h2>
 			<p>For the photo used in the feature section of index.html.</p>
+			
+			<h2>Google Images</h2>
+			<p>For the various manufaturers' logos.</p>
 
 		</div>
 		
@@ -262,17 +240,115 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="index.html" data-icon="home">Home</a></li>
-					<li><a href="../Bronze/index.html" data-icon="star" >Bronze App</a></li>
-					<li><a href="https://github.com/nednal12/WorkingBranch.git" data-icon="gear" >Git Hub</a></li>
 					<li><a href="#thanks" data-icon="plus" class="ui-btn-active ui-state-persist">Thanks</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
+
+
+	<!--  ------------------------------------------- Intial Page ------------------------------------------------------- -->
+	<div data-role="page" id="addItem" data-add-back-btn="true">
+		
+		<div data-role="header" class="header">
+			<div id="searchDiv">
+				<input type="search" id="searchText" name="searchText" placeholder="search stored data" data-role="none"/>
+				<a href="#search"><input type="submit" id="searchBtn" value="Go" data-role="none"/></a> 
+			</div>
+			<p>Maintenance Tracker</p>
+		</div>
+		
+		<div data-role="content">
+		
+		<form id="bigForm" name="bigForm" action="#" method="post">
+			<fieldset data-role="fieldcontain">
+				<legend>Vehicle Information</legend>
+				
+					<label for="owner">Owner:</label>
+					<input type="text" id="owner" name="owner" data-mini="true"/>
+					
+					<div id="carMake" name="carMake">
+						<label for="allMakes">Make:</label> 
+						<select id="allMakes" name="allMakes" data-mini="true" data-native-menu="false">
+							<option value="none" data-placeholder="true">--- Select Make ---</option>
+							<option value="Chevy">Chevy</option>
+							<option value="Chrysler">Chrysler</option>
+							<option value="Ford">Ford</option>
+							<option value="Jeep">Jeep</option>
+							
+						</select> 
+					</div>
+					
+					<label for="carModel">Model:</label>
+					<input type="text" id="carModel" name="carModel" data-mini="true"/>
+					
+					<label for="carMileage">Approximate Mileage:</label>
+					<input type="number" id="carMileage" name="carMileage" min="30000" max="300000" step="5000" data-mini="true"/>
+					
+					<fieldset data-role="controlgroup" data-mini="true">
+						<legend>Transmission:</legend>
+						
+							<input type="radio" checked="checked" value="Automatic" id="automatic" name="transmission" />
+							<label for="automatic">Automatic</label>
+							
+							<input type="radio" value="Manual" id="manual" name="transmission" />
+							<label for="manual">Manual</label>
+						
+					</fieldset>
+					
+					<div data-role="fieldcontain">
+						<label for="carCondition">Condition:</label>
+						<input type="range" id="carCondition" name="carCondition" value="5" min="1" max="10" data-highlight="true" data-mini="true"/>
+					</div>
+			
+			</fieldset>
+			<fieldset>
+				<legend>Maintenance</legend>
+				
+					<fieldset data-role="controlgroup" data-mini="true">
+						<legend>For which services would you like to be reminded:</legend>
+						
+						<input type="checkbox" checked="checked" value="Oil and Filter" id="oilAndFilter" name="oilAndFilter" />
+						<label for="oilAndFilter">Oil and Filter</label>
+						
+						<input type="checkbox" value="Tire Rotation" id="tireRotation" name="tireRotation" />
+						<label for="tireRotation">Tire Rotation</label>
+
+					</fieldset>
+					
+				<label for="lastOilChange">Date of last oil change:</label>
+				<input type="date" id="lastOilChange" name="lastOilChange" data-mini="true" min="2011-01-01" max="2012-06-28"/>
+				
+				<label for="lastAirChange">Date of last air filter change:</label>
+				<input type="date" id="lastAirChange" name="lastAirChange" data-mini="true" min="2011-01-01" max="2012-06-28"/>
+				
+				<label for="comments">Notes:</label>
+				<textarea id="comments" name="comments" data-mini="true">Reminders, areas of concern, etc..</textarea>
+				
+			</fieldset>
+			<input id="saveIt"  type="submit" value="Save Vehicle Info" />
+			<input id="resetForm"  type="reset" value="Reset Form" />
+		</form>
+
+		</div>
+		
+		
+		<div data-role="footer" data-position="fixed" data-id="fixedFooter">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
+					<li><a href="#thanks" data-icon="plus">Thanks</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+
 	
 		<!-- JavaScript under here -->
 		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+		<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
 		<script type="text/javascript" src="js/json.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
 	</body>

@@ -1,11 +1,5 @@
-var logFormData = function(data){
-	// Write all form data to the console in order to view the objects
-	
-	console.log(data);
-};
-
 $('#addItem').on('pageinit', function(){
-
+		
 		var myForm = $('#bigForm');
 		    myForm.validate({
 			invalidHandler: function(form, validator) {
@@ -22,6 +16,13 @@ $('#addItem').on('pageinit', function(){
 });
 
 //The functions below can go inside or outside the pageinit function for the page in which it is needed.
+
+var logFormData = function(data){
+	// Write all form data to the console in order to view the objects
+	
+	console.log(data);
+};
+
 
 var autofillData = function (){
 	 

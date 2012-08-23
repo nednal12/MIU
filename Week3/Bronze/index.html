@@ -43,6 +43,7 @@
 		</div>
 		
 		<div data-role="content">
+			<h6>Keep Track of Your Vehicle's Maintenance History</h6>
 			<fieldset class="ui-grid-b" id="feature">
 				<div class="ui-block-a">
 					<img src="images/feature.jpg" alt="Woman checking car's oil." id="featureJPG" height="120px" width="80px"/>
@@ -55,22 +56,35 @@
 				</div>
 			</fieldset>
 
-
-			<div data-role="collapsible-set" id="ownersSet">
+			<div data-role="listview" data-inset="true">
+				 
+				 <li data-role="list-divider">
+				 	<h3>Browse</h3>
+				 </li>
+				 
+			
+				<li>
+					<div data-role="collapsible-set" id="ownersSet">
 				
-				<div data-role="collapsible" id="ownersList">
-					<h3 id="ownersBtn">Owners</h3>
-				</div>
+						<div data-role="collapsible" id="ownersList">
+							<h3 id="ownersBtn">Owners</h3>
+								<div class="ui-grid-b" id="ownersGrid"></div>
+						</div>
 				
-				<div data-role="collapsible" id="makesList">
-					<h3 id="makesBtn">Vehicle Makes</h3>
-				</div>
+						<div data-role="collapsible" id="makesList">
+							<h3 id="makesBtn">Vehicle Makes</h3>
+							<div class="ui-grid-b" id="makesGrid"></div>
+						</div>
 				
-				<div data-role="collapsible" id="modelsList">
-					<h3 id="modelsBtn">Vehicle Models</h3>
-				</div>
+						<div data-role="collapsible" id="modelsList">
+							<h3 id="modelsBtn">Vehicle Models</h3>
+							<div class="ui-grid-b" id="modelsGrid"></div>
+						</div>
 				
+					</div>
+				</li>
 			</div>
+			
 		</div>	
 		
 		<div data-role="footer" data-position="fixed" data-id="fixedFooter">

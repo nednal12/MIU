@@ -13,6 +13,18 @@ body {
 	vertical-align:275%;
 }
 
+#goBack {
+	display:inline;
+}
+
+.notHere {
+	display:none;
+}
+
+#page2Header {
+	display:inline;
+}
+
 .alignCenter2 {
 	vertical-align:275%;
 }

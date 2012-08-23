@@ -64,14 +64,25 @@ window.addEventListener("DOMContentLoaded", function(){
 /* ------------------------------------------------------------------------------------------------------
  | The following section contains the logic responsible for performing the search of the json data.
  ------------------------------------------------------------------------------------------------------*/
-	var searchBtn = getIt('searchBtn'),
-		glblCount = 0;
 	
+	var searchBtn = getIt('searchBtn');
 	searchBtn.addEventListener('click', doSearch);
 	// doSearch - Cycle thru each of the objects contained within the json object and identify elements
 	// that match the search string. Output all of the corresponding data elements when a match is found.
 	
-	function doSearch() {
+	
+});
+
+
+	var glblCount = 0;
+		
+// getIt - use this function whenever you need to obtain a handle of an element using its id.
+	function getIt(x){
+		var whichElement = document.getElementById(x);
+		return whichElement;
+	}
+
+function doSearch() {
 		var searchText = getIt('searchText').value,
 			searchBox = getIt('searchText'),
 			selectDiv = getIt('searchSet');
@@ -124,6 +135,4 @@ window.addEventListener("DOMContentLoaded", function(){
 /* ------------------------------------------------------------------------------------------------------
  | End of the search logic section.
  ------------------------------------------------------------------------------------------------------*/
-
-})
 

@@ -19,14 +19,15 @@
 		<h1>Maintenance Tracker</h1>
 		<form id=bigForm action="#" method="post">
 			<fieldset>
+				<label>* Denotes a required field</label>
 				<legend>Vehicle Information</legend>
 				<ul id="errors"></ul>
 				<ul>
 					<label id="nameError" style="display: none">Enter your name</label>
-					<li><label for="owner">Owner:</label><input type="text" id="owner" /></li>
-					<li id="carMake"><label for="allMakes">Make:</label></li>
-					<li><label for="carModel">Model:</label><input type="text" id="carModel" /></li>
-					<li><label for="carMileage">Approximate Mileage:</label><input type="number" id="carMileage" min="30000" max="300000" step="5000" /></li>
+					<li><label for="owner">* Owner:</label><input type="text" id="owner" /></li>
+					<li id="carMake"><label for="allMakes">* Make:</label></li>
+					<li><label for="carModel">* Model:</label><input type="text" id="carModel" /></li>
+					<li><label for="carMileage">* Approximate Mileage:</label><input type="number" id="carMileage" min="30000" max="300000" step="5000" /></li>
 					<li>Transmission:
 						<ul>
 							<li><input type="radio" checked="checked" value="Automatic" id="automatic" name="transmission" /><label for="automatic">Automatic</label></li>

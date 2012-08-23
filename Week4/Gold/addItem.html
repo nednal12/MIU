@@ -23,8 +23,9 @@
 	
 		<!-- StyleSheets under here -->
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
-		<link rel="stylesheet" href="css/style.css" type="text/css" />
-	
+		<link rel="stylesheet" href="css/themes/GoldApp.css"/>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile.structure-1.1.1.min.css" />
+		<link rel="stylesheet" href="css/style.css"/>
 		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 		<script src="js/libs/modernizr.custom.min.js"></script>
 
@@ -32,14 +33,16 @@
 	<body>
 	
 	<!--  ------------------------------------------- Intial Page ------------------------------------------------------- -->
-	<div data-role="page" id="addItem" data-add-back-btn="true">
-		
+	<div data-role="page" id="addItem" data-add-back-btn="true" data-theme="a" data-content-theme="c">
+		<div id="branding">
+			<img src="images/branding.gif" class="ui-btn-left" />
+		</div>
 		<div data-role="header" class="header">
-			<div id="searchDiv">
-				<input type="search" id="searchText" name="searchText" placeholder="search stored data" data-role="none"/>
-				<a href="#search"><input type="submit" id="searchBtn" value="Go" data-role="none"/></a> 
+			<div>
+				<a id="goBack" href="index.html" data-ajax="false" class="ui-btn-left" data-role="button" data-inline="true" data-icon="arrow-l" data-iconpos="left" data-transition="slide">Back</a>
 			</div>
-			<p>Maintenance Tracker</p>
+			<p id="page2Header">Maintenance Tracker</p>
+			
 		</div>
 		
 		<div data-role="content">
@@ -111,98 +114,12 @@
 				<textarea id="comments" name="comments" data-mini="true" placeholder="Reminders, areas of concern, etc.." ></textarea>
 				
 			</fieldset>
-			<input id="saveIt"  type="submit" value="Save Vehicle Info" data-theme="b"/>
-			<input id="resetForm"  type="reset" value="Reset Form" data-theme="a"/>
+			<input id="saveIt"  type="submit" value="Save Vehicle Info" data-theme="e"/>
+			<input id="resetForm"  type="reset" data-inline="true" value="Reset Form" data-theme="a"/>
 		</form>
 
 		</div>
 		
-		
-		<div data-role="footer" data-position="fixed" data-id="fixedFooter">
-			<div data-role="navbar">
-				<ul>
-					<li><a href="index.html" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
-					<li><a href="#thanks" data-icon="plus">Thanks</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	
-
-	
-	<!--  ---------------------------------------- Vehicle Models Page ---------------------------------------------------- -->
-	<div data-role="page" id="models" data-add-back-btn="true">
-		
-		<div data-role="header" class="header">
-			<p>Vehicles Models</p>
-		</div>
-			
-		<div data-role="content">
-			<ul data-role="listview" id="modelsList" data-collapsed="false" data-filter="true">
-				<h3>Vehicle Models</h3>
-			</ul>
-
-		</div>
-		
-		<div data-role="footer" data-position="fixed" data-id="fixedFooter">
-			<div data-role="navbar">
-				<ul>
-					<li><a href="index.html" data-icon="home">Home</a></li>
-					<li><a href="#thanks" data-icon="plus">Thanks</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	
-	<!--  ------------------------------------------ Search Page ------------------------------------------------------ -->
-	<div data-role="page" id="search" data-add-back-btn="true">
-		
-		<div data-role="header" class="header">
-			<p>Search Results</p>
-		</div>
-			
-		<div data-role="content" id="searchContent">
-			
-			<div data-role="collapsible-set" id="searchSet"></div>
-
-		</div>
-		
-		<div data-role="footer" data-position="fixed" data-id="fixedFooter">
-			<div data-role="navbar">
-				<ul>
-					<li><a href="index.html" data-icon="home">Home</a></li>
-					<li><a href="#thanks" data-icon="plus">Thanks</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	
-	
-	
-	<!--  ---------------------------------------- Acknowledgements Page -------------------------------------------------- -->
-	<div data-role="page" id="thanks" data-add-back-btn="true">
-		<div data-role="header" class="header">
-			<p>Acknowledgements</p>
-		</div>
-			
-		<div data-role="content">
-			<h1>Special Thanks to the Following:</h1>
-			<h2>Google Images</h2>
-			<p>For all of the various manufaturers' logos.</p>
-			
-			<h2>iStockphoto.com</h2>
-			<p>For the photo used in the feature section of index.html.</p>
-
-		</div>
-		
-		<div data-role="footer" data-position="fixed" data-id="fixedFooter">
-			<div data-role="navbar">
-				<ul>
-					<li><a href="index.html" data-icon="home">Home</a></li>
-					<li><a href="#thanks" data-icon="plus" class="ui-btn-active ui-state-persist">Thanks</a></li>
-				</ul>
-			</div>
-		</div>
 	</div>
 	
 		<!-- JavaScript under here -->

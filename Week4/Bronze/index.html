@@ -22,20 +22,23 @@
 		<meta http-equiv="cleartype" content="on">
 	
 		<!-- StyleSheets under here -->
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
-		<link rel="stylesheet" href="css/style.css" type="text/css" />
-	
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/themes/my-custom-theme.min.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile.structure-1.1.1.min.css" />
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
 		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 		<script src="js/libs/modernizr.custom.min.js"></script>
 
 	</head>
-	<body>
+	<body class="ui-overlay-a">
 	
 	<!--  ------------------------------------------- Intial Page ------------------------------------------------------- -->
-	<div data-role="page" id="page1">
+	<div data-role="page" id="page1" data-theme="a" data-content-theme="a">
 		
 		<div data-role="header" class="header">
 			<div id="searchDiv">
+				<img src="images/branding.gif" class="ui-img-left"/>
 				<input type="search" id="searchText" placeholder="search" data-role="none"/>
 				<a href="#search"><input type="submit" id="searchBtn" value="Go" data-role="none"/></a> 
 			</div>
@@ -52,13 +55,13 @@
 					<p>Add Vehicle</p>
 				</div>
 				<div class="ui-block-c" id="featureBtn">
-					<a href="addItem.html" data-role="button" data-mini="true" data-inline="true" data-icon="arrow-r" data-iconpos="notext" data-transition="slide"></a>
+					<a href="addItem.html" data-ajax="false" data-role="button" data-mini="true" data-inline="true" data-icon="arrow-r" data-iconpos="notext" data-transition="slide"></a>
 				</div>
 			</fieldset>
 
-			<div data-role="listview" data-inset="true">
+			<div data-role="listview" data-inset="true" data-theme="a" data-content-theme="a">
 				 
-				 <li data-role="list-divider">
+				 <li data-role="list-divider" data-theme="a" data-content-theme="a" class="ui-bar-a">
 				 	<h3>Browse</h3>
 				 </li>
 				 
@@ -91,105 +94,12 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="index.html" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
-					<li><a href="../Gold/index.html" data-icon="star" >Gold App</a></li>
-					<li><a href="https://github.com/nednal12/WorkingBranch.git" data-icon="gear" >Git Hub</a></li>
 					<li><a href="#thanks" data-icon="plus">Thanks</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
-	
-	<!--  ------------------------------------------- Owners Page ------------------------------------------------------- -->
-	<div data-role="page" id="owners" data-add-back-btn="true">
-		
-		<div data-role="header" class="header">
-			<p>Owners</p>
-		</div>
-			
-		<div data-role="content">
-			
-			<div data-role="collapsible-set" id="ownersSet">
-				
-				<div data-role="collapsible" id="ownersList" data-collapsed="false">
-					<h3>Owners</h3>
-				</div>
-				
-			</div>
 
-		</div>
-		
-		<div data-role="footer" data-position="fixed" data-id="fixedFooter">
-			<div data-role="navbar">
-				<ul>
-					<li><a href="index.html" data-icon="home">Home</a></li>
-					<li><a href="../Gold/index.html" data-icon="star" >Gold App</a></li>
-					<li><a href="https://github.com/nednal12/WorkingBranch.git" data-icon="gear" >Git Hub</a></li>
-					<li><a href="#thanks" data-icon="plus">Thanks</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	
-	<!--  ---------------------------------------- Vehicle Makes Page ---------------------------------------------------- -->
-	<div data-role="page" id="makes" data-add-back-btn="true">
-		
-		<div data-role="header" class="header">
-			<p>Vehicles Makes</p>
-		</div>
-			
-		<div data-role="content">
-			<div data-role="collapsible-set" id="makesSet">
-				
-				<div data-role="collapsible" id="makesList" data-collapsed="false">
-					<h3>Vehicle Makes</h3>
-				</div>
-				
-			</div>
-
-		</div>
-		
-		<div data-role="footer" data-position="fixed" data-id="fixedFooter">
-			<div data-role="navbar">
-				<ul>
-					<li><a href="index.html" data-icon="home">Home</a></li>
-					<li><a href="../Gold/index.html" data-icon="star" >Gold App</a></li>
-					<li><a href="https://github.com/nednal12/WorkingBranch.git" data-icon="gear" >Git Hub</a></li>
-					<li><a href="#thanks" data-icon="plus">Thanks</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	
-	<!--  ---------------------------------------- Vehicle Models Page ---------------------------------------------------- -->
-	<div data-role="page" id="models" data-add-back-btn="true">
-		
-		<div data-role="header" class="header">
-			<p>Vehicles Models</p>
-		</div>
-			
-		<div data-role="content">
-			<div data-role="collapsible-set" id="modelsSet">
-				
-				<div data-role="collapsible" id="modelsList" data-collapsed="false">
-					<h3>Vehicle Models</h3>
-				</div>
-				
-			</div>
-
-		</div>
-		
-		<div data-role="footer" data-position="fixed" data-id="fixedFooter">
-			<div data-role="navbar">
-				<ul>
-					<li><a href="index.html" data-icon="home">Home</a></li>
-					<li><a href="../Gold/index.html" data-icon="star" >Gold App</a></li>
-					<li><a href="https://github.com/nednal12/WorkingBranch.git" data-icon="gear" >Git Hub</a></li>
-					<li><a href="#thanks" data-icon="plus">Thanks</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	
 	<!--  ------------------------------------------ Search Page ------------------------------------------------------ -->
 	<div data-role="page" id="search" data-add-back-btn="true">
 		
@@ -207,8 +117,6 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="index.html" data-icon="home">Home</a></li>
-					<li><a href="../Gold/index.html" data-icon="star" >Gold App</a></li>
-					<li><a href="https://github.com/nednal12/WorkingBranch.git" data-icon="gear" >Git Hub</a></li>
 					<li><a href="#thanks" data-icon="plus">Thanks</a></li>
 				</ul>
 			</div>
@@ -248,12 +156,12 @@
 			
 		<div data-role="content">
 			<h1>Special Thanks to the Following:</h1>
-			<h2>Ms. Alarcon</h2>
-			<p>Thank you for providing me with additional time to submit my Week1 Discussion Video and for 
-				providing very challenging assignments.</p>
 			
 			<h2>iStockphoto.com</h2>
 			<p>For the photo used in the feature section of index.html.</p>
+			
+			<h2>Google Images</h2>
+			<p>For the various manufaturers' logos.</p>
 
 		</div>
 		
@@ -261,8 +169,6 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="index.html" data-icon="home">Home</a></li>
-					<li><a href="../Gold/index.html" data-icon="star" >Gold App</a></li>
-					<li><a href="https://github.com/nednal12/WorkingBranch.git" data-icon="gear" >Git Hub</a></li>
 					<li><a href="#thanks" data-icon="plus" class="ui-btn-active ui-state-persist">Thanks</a></li>
 				</ul>
 			</div>
@@ -270,8 +176,7 @@
 	</div>
 	
 		<!-- JavaScript under here -->
-		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+		
 		<script type="text/javascript" src="js/json.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
 	</body>

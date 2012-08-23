@@ -40,15 +40,17 @@ window.addEventListener("DOMContentLoaded", function(){
 			//Cycle thru the JSON data and create the accordian
 			for (var n in json) {
 			
-				var makePara = document.createElement('input');
-				makePara.setAttribute("type","button");
+				var makePara = document.createElement('li');
+				var makePic = document.createElement('img');
+				makePic.setAttribute("src","images/" + json[n]["make"][1] + ".jpg");
+				makePic.setAttribute("alt",json[n]["make"][1]);
+				makePic.setAttribute("height","40px");
+				makePic.setAttribute("width","40px");
 				makePara.setAttribute("value",json[n][var3][1]);
-				makePara.setAttribute("data-mini","false");
-				makePara.setAttribute("data-icon","arrow-r");
-				makePara.setAttribute("data-iconpos", "right");
-				makePara.setAttribute("data-transition","slide");
+				makePara.innerHTML=json[n][var3][1];
 				makePara.setAttribute("id", var1);
 				selectDiv.appendChild(makePara);
+				makePara.appendChild(makePic);
 			
 			}
 		}

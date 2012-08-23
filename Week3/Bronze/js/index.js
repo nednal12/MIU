@@ -24,9 +24,9 @@ window.addEventListener("DOMContentLoaded", function(){
 		makesBtn = getIt('makesBtn'),
 		modelsBtn = getIt('modelsBtn');
 	
-	ownersBtn.addEventListener('click', createAccordian('ownersPara', 'ownersList', 'owner'));
-	makesBtn.addEventListener('click', createAccordian('makesPara', 'makesList', 'make'));
-	modelsBtn.addEventListener('click', createAccordian('modelsPara', 'modelsList', 'model'));
+	ownersBtn.addEventListener('click', createAccordian('ownersPara', 'ownersGrid', 'owner'));
+	makesBtn.addEventListener('click', createAccordian('makesPara', 'makesGrid', 'make'));
+	modelsBtn.addEventListener('click', createAccordian('modelsPara', 'modelsGrid', 'model'));
 	
 	function createAccordian (var1, var2, var3){
 		// The following line will prevent the remainder of the code from running if the list has
@@ -40,17 +40,37 @@ window.addEventListener("DOMContentLoaded", function(){
 			//Cycle thru the JSON data and create the accordian
 			for (var n in json) {
 			
-				var makePara = document.createElement('input');
-				makePara.setAttribute("type","button");
+				var makePara = document.createElement('div');
+				var makePic = document.createElement('img');
+				var makeBreak = document.createElement('br');
+				var makeP = document.createElement('p');
+				makePic.setAttribute("src","images/" + json[n]["make"][1] + ".jpg");
+				makePic.setAttribute("alt",json[n]["make"][1]);
+				makePic.setAttribute("height","40px");
+				makePic.setAttribute("width","40px");				
+				if(n % 3 === 0) {
+					makePara.setAttribute("class","ui-block-a");
+				}
+				else if(n % 2 === 0) {
+					makePara.setAttribute("class","ui-block-b");
+				}
+				else {
+					makePara.setAttribute("class","ui-block-c");
+				};
+				
+				
 				makePara.setAttribute("value",json[n][var3][1]);
-				makePara.setAttribute("data-role","none");
-				makePara.setAttribute("data-mini","false");
-				makePara.setAttribute("data-icon","arrow-r");
-				makePara.setAttribute("data-iconpos", "right");
-				makePara.setAttribute("data-transition","slide");
+				
+
 				makePara.setAttribute("id", var1);
+				makeP.innerHTML=json[n][var3][1];
+				
 				selectDiv.appendChild(makePara);
-			
+				
+				makePara.appendChild(makePic);
+				makePara.appendChild(makeBreak);
+				makePara.appendChild(makeP);
+				
 			}
 		}
 		$('#ownersSet').collapsibleset('refresh');

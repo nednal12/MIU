@@ -6,6 +6,10 @@ Date: 2012-08-09
 */ 
 
 
+#branding {
+	background:#000000;
+}
+
 .header {
 	text-align:center;
 }
@@ -40,4 +44,8 @@ label.error {
 	display: block;
 	color: #cc0000;
 	margin: 10px 0px;
+}
+
+#saveIt {
+	color:#0000FF !important;
 }
